@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1202</width>
+    <height>759</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>30</y>
+      <width>871</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="0">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>add measurement</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>delete measurement</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>connect to server (download data)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="3">
+      <widget class="QTableView" name="tableView"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>180</y>
+      <width>221</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>George growbox</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dmitrii growbox</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Yaroslav growbox</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Password</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>30</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>60</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font/>
+    </property>
+    <property name="text">
+     <string>sign in</string>
+    </property>
+   </widget>
+   <widget class="QCustomPlot" name="customplot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>290</y>
+      <width>871</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>660</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>plot the diagram</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>660</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>clear</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>660</y>
+      <width>201</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>660</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Progress bar with information</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>430</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1202</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actioncreate_experiment_series"/>
+    <addaction name="actionopen_experiment_series"/>
+    <addaction name="actiondownload_data_from_database"/>
+   </widget>
+   <widget class="QMenu" name="menuinstruments">
+    <property name="title">
+     <string>instruments</string>
+    </property>
+    <widget class="QMenu" name="menusoil_sensor">
+     <property name="title">
+      <string>soil sensor</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionadd_new_measurement_2"/>
+    </widget>
+    <widget class="QMenu" name="menucameras">
+     <property name="title">
+      <string>cameras</string>
+     </property>
+    </widget>
+    <addaction name="menusoil_sensor"/>
+    <addaction name="menucameras"/>
+    <addaction name="actiondeath_laser"/>
+   </widget>
+   <widget class="QMenu" name="menuview">
+    <property name="title">
+     <string>view</string>
+    </property>
+    <addaction name="actioncameras_2"/>
+    <addaction name="actionsoil_sensor_diagram"/>
+   </widget>
+   <widget class="QMenu" name="menuinfo">
+    <property name="title">
+     <string>info</string>
+    </property>
+    <addaction name="actiondatasheet"/>
+   </widget>
+   <widget class="QMenu" name="menuhelp">
+    <property name="title">
+     <string>help</string>
+    </property>
+    <addaction name="actioninfo"/>
+    <addaction name="actionHelp_center_phone_7_916_2576182"/>
+    <addaction name="actionexit_please"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuinstruments"/>
+   <addaction name="menuview"/>
+   <addaction name="menuinfo"/>
+   <addaction name="menuhelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actioncreate_experiment_series">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/square.png</normaloff>:/prefix/img/square.png</iconset>
+   </property>
+   <property name="text">
+    <string>create experiment series</string>
+   </property>
+  </action>
+  <action name="actionopen_experiment_series">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/Book_open_duotone_line.png</normaloff>:/prefix/img/Book_open_duotone_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>open experiment series</string>
+   </property>
+  </action>
+  <action name="actiondeath_laser">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/Alarm_duotone.png</normaloff>:/prefix/img/Alarm_duotone.png</iconset>
+   </property>
+   <property name="text">
+    <string>plant death laser</string>
+   </property>
+  </action>
+  <action name="actionadd_new_measurement_2">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/square.png</normaloff>:/prefix/img/square.png</iconset>
+   </property>
+   <property name="text">
+    <string>add new measurement</string>
+   </property>
+  </action>
+  <action name="action2st_floor_cam">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/Camera_duotone_line.png</normaloff>:/prefix/img/Camera_duotone_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>2st floor cam</string>
+   </property>
+  </action>
+  <action name="actionview">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/nut.png</normaloff>:/prefix/img/nut.png</iconset>
+   </property>
+   <property name="text">
+    <string>view</string>
+   </property>
+  </action>
+  <action name="actionview_2">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/gear_fill.png</normaloff>:/prefix/img/gear_fill.png</iconset>
+   </property>
+   <property name="text">
+    <string>view</string>
+   </property>
+  </action>
+  <action name="actioncameras_2">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/Camera_duotone_line.png</normaloff>:/prefix/img/Camera_duotone_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>cameras</string>
+   </property>
+  </action>
+  <action name="actionsoil_sensor_diagram">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/diagram_fill.png</normaloff>:/prefix/img/diagram_fill.png</iconset>
+   </property>
+   <property name="text">
+    <string>soil sensor diagram</string>
+   </property>
+  </action>
+  <action name="actioninfo">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/Alarm_duotone.png</normaloff>:/prefix/img/Alarm_duotone.png</iconset>
+   </property>
+   <property name="text">
+    <string>info</string>
+   </property>
+  </action>
+  <action name="actionHelp_center_phone_7_916_2576182">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/phone.png</normaloff>:/prefix/img/phone.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help center phone +7(916)2576182</string>
+   </property>
+  </action>
+  <action name="actiondatasheet">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/Info.png</normaloff>:/prefix/img/Info.png</iconset>
+   </property>
+   <property name="text">
+    <string>datasheet</string>
+   </property>
+  </action>
+  <action name="actionexit_please">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/prefix/img/Sign_in_squre_fill.png</normaloff>:/prefix/img/Sign_in_squre_fill.png</iconset>
+   </property>
+   <property name="text">
+    <string>exit, please</string>
+   </property>
+  </action>
+  <action name="actiondownload_data_from_database">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/img/Upload_duotone_line.png</normaloff>:/img/Upload_duotone_line.png</iconset>
+   </property>
+   <property name="text">
+    <string>download data from database</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

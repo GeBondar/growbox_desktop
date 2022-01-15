@@ -1,0 +1,131 @@
+#include <QtWidgets>
+#include <QtSql>
+#include <QSqlQuery>
+#include <QMainWindow>
+
+#include "mainwindow.h"
+//#include "anotherwindow.h"
+
+#include "./ui_mainwindow.h"
+#include "../connection.h"
+
+
+
+MainWindow::MainWindow(const QString &tableName, QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+
+    //sWindow = new AnotherWindow();
+    // подключаем к слоту запуска главного окна по кнопке во втором окне
+    //connect(sWindow, &AnotherWindow::firstWindow, this, &MainWindow::show);
+
+    model = new QSqlTableModel(this);
+    model->setTable(tableName);
+    model->setEditStrategy(QSqlTableModel::OnManualSubmit);
+    model->select();
+
+    /*model->setHeaderData(0, Qt::Horizontal, tr("descript"));
+    model->setHeaderData(1, Qt::Horizontal, tr("username"));
+    model->setHeaderData(2, Qt::Horizontal, tr("folder_link"));
+    model->setHeaderData(3, Qt::Horizontal, tr("plants_array"));
+    */
+    //QTableView *view = new QTableView;
+
+    setWindowIcon(QIcon("..\\growbox_desktop_main_window\\img\\icon.png"));
+    setWindowTitle(tr("Growbox Desktop"));
+    ui->tableView->setModel(model);
+    //view->resizeColumnsToContents();
+
+    progressBar = new QProgressBar();
+    progressBar->setMinimum(0);
+    progressBar->setMaximum(100);
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::submit()
+{
+    model->database().transaction();
+    if (model->submitAll()) {
+        model->database().commit();
+    } else {
+        model->database().rollback();
+        QMessageBox::warning(this, tr("GrowBox Desktop"),
+                             tr("The database reported an error: %1")
+                             .arg(model->lastError().text()));
+    }
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    model->insertRow(model->rowCount());
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    model->removeRow(row);
+}
+
+
+void MainWindow::on_tableView_clicked(const QModelIndex &index)
+{
+    row = index.row();
+}
+
+
+void MainWindow::on_progressBar_2_valueChanged(int value)
+{
+ //   value = 100;
+    progressBar->setValue(progressBar->value()+100);
+}
+
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    createConnection();
+
+    model = new QSqlTableModel(this);
+    model->setTable("sensor_values");
+    model->setEditStrategy(QSqlTableModel::OnManualSubmit);
+    model->select();
+    ui->tableView->setModel(model);
+}
+
+
+void MainWindow::on_actionexit_please_triggered()
+{
+    QApplication::quit();
+}
+
+
+void MainWindow::on_actiondownload_data_from_database_triggered()
+{
+    createConnection();
+
+    model = new QSqlTableModel(this);
+    model->setTable("sensor_values");
+    model->setEditStrategy(QSqlTableModel::OnManualSubmit);
+    model->select();
+    ui->tableView->setModel(model);
+}
+
+/*
+void MainWindow::on_actioninfo_triggered()
+{
+    ui->statusbar->showMessage("Извините, информации нет, или обратитесь к Ефимову");
+}
+*/
+
+/*void MainWindow::on_actiondatasheet_triggered()
+{
+    sWindow->show();  // Показываем второе окно
+    this->close();    // Закрываем основное окно
+}
+*/

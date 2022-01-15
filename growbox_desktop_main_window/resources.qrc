@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/prefix">
+        <file>img/icon.ico</file>
+        <file>img/icon.png</file>
+        <file>img/arhive_load_duotone_line.png</file>
+        <file>img/arhive_load_fill.png</file>
+        <file>img/Broken_heart_fill.png</file>
+        <file>img/Carbs.png</file>
+        <file>img/chart.png</file>
+        <file>img/chart_fill.png</file>
+        <file>img/desktop.png</file>
+        <file>img/diagram_alt.png</file>
+        <file>img/diagram_fill.png</file>
+        <file>img/fill_nut_2.png</file>
+        <file>img/gear_fill.png</file>
+        <file>img/gear_line.png</file>
+        <file>img/Img_out-box.png</file>
+        <file>img/Img_out-box_duotone_line.png</file>
+        <file>img/Info.png</file>
+        <file>img/Info_fill.png</file>
+        <file>img/Key_fill.png</file>
+        <file>img/Lamp_duotone_line.png</file>
+        <file>img/Move.png</file>
+        <file>img/nut.png</file>
+        <file>img/Percent.png</file>
+        <file>img/round.png</file>
+        <file>img/round_fill.png</file>
+        <file>img/Sign_in_squre_fill.png</file>
+        <file>img/square.png</file>
+        <file>img/square_fill.png</file>
+        <file>img/Water.png</file>
+        <file>img/Book_open_duotone_line.png</file>
+        <file>img/Alarm_duotone.png</file>
+        <file>img/Alarm_fill.png</file>
+        <file>img/Save_fill.png</file>
+        <file>img/Database.png</file>
+        <file>img/Camera_duotone_line.png</file>
+        <file>img/phone.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>img/Upload_duotone_line.png</file>
+    </qresource>
+</RCC>
